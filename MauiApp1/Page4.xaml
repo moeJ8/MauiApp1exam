@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.Page4"
+             Title="Page4">
+    <ScrollView>
+        <StackLayout>
+            <Label Text="Assignment List" FontAttributes="Bold" FontSize="Title"/>
+            <StackLayout>
+                <ScrollView>
+                    <ListView x:Name="assilistXaml">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout Orientation="Horizontal">
+                                        
+                                        <Label Text="{Binding C_ID}" Margin="5,0,0,3" TextColor="red"/>
+                                        <Label Text="{Binding P_ID}" Margin="5,0,0,3" TextColor="red"/>
+                                        
+
+
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </ScrollView>
+            </StackLayout>
+            <StackLayout BackgroundColor="Green">
+                <Button x:Name="SHOW" Text="SHOW" Clicked="SHOW_Clicked" WidthRequest="100" HeightRequest="50" Background="white" TextColor="Black"/>
+            </StackLayout>
+        </StackLayout>
+       
+    </ScrollView>
+</ContentPage>

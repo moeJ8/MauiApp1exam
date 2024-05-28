@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.MainPage">
+
+    <StackLayout Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="Center" >
+        <Label Text="Sporting Club" TextColor="Black" FontSize="Large"/>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="30">
+            <Image Source="ball.png" Margin="10,10,11,11" WidthRequest="50"/>
+            <Image Source="boat.png" WidthRequest="50"/>
+
+        </StackLayout>
+    </StackLayout>
+
+    
+
+</ContentPage>

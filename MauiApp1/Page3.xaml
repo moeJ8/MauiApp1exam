@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.Page3"
+             Title="Page3">
+    <ScrollView>
+        <StackLayout>
+            <StackLayout>
+                <Label Text="Children's List" FontAttributes="Bold" FontSize="Title"/>
+                <StackLayout>
+                    <ScrollView>
+                        <ListView x:Name="ClistXaml" ItemTapped="ClistXaml_ItemTapped">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <StackLayout Orientation="Horizontal">
+
+                                            <Label Text="{Binding C_ID}" Margin="5,0,0,3" TextColor="red"/>
+                                            <Label Text="{Binding C_L_Name}" Margin="5,0,0,3"/>
+                                            <Label Text="{Binding C_Gender}" Margin="5,0,0,3"/>
+
+
+                                        </StackLayout>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </ScrollView>
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="Parent's List" FontAttributes="Bold" FontSize="Title"/>
+                <StackLayout>
+                    <ScrollView>
+
+
+                        <ListView x:Name="parentlistXaml" ItemTapped="parentlistXaml_ItemTapped">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label Text="{Binding P_ID}" Margin="5,0,0,3" TextColor="red"/>
+                                            <Label Text="{Binding P_Name}" Margin="5,0,0,3" TextColor="red"/>
+                                            <Label Text="{Binding P_L_Name}" Margin="5,0,0,3"/>
+                                            <Label Text="{Binding P_Tel}" Margin="5,0,0,3"/>
+
+
+                                        </StackLayout>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </ScrollView>
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout BackgroundColor="Green">
+                <Button x:Name="ADD" Text="ADD" Clicked="ADD_Clicked" WidthRequest="100" HeightRequest="50" Background="white" TextColor="Black"/>
+            </StackLayout>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
